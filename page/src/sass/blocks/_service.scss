@@ -1,0 +1,70 @@
+.service {
+    padding: 133px 0 186px;
+    background: $service;
+    @media(max-width: $md-screen-min) {
+        padding: 91px 0 81px;
+        overflow: hidden;
+    }
+    .service__container {
+        position: relative;
+        @media(max-width: $md-screen-min) {
+            svg {
+                width: 19.06px;
+                height: 20px;
+            }
+            h2 {
+                margin: 25px 0 58.33px;
+            }
+        }
+        .service-arrow {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .advantages__wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            grid-row-gap: 100px;
+            @media(max-width: $md-screen-min) {
+                grid-template-columns: 1fr;
+                justify-items: start;
+                grid-row-gap: 51.33px;
+            }
+            .adv-item {
+                max-width: 440px;
+                h4 {
+                    font-family: 'ProximaNova-700';
+                    margin: 25px 0 50px;
+                    font-size: 32px;
+                    line-height: 39px;
+                    color: $main-color;
+                    @media(max-width: $md-screen-min) {
+                        margin: 17px 0 35px;
+                        font-size: 22px;
+                        line-height: 27px;
+                    }
+                }
+                p {
+                    font-family: 'ProximaNova-300';
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #8796AE;
+                    @media(max-width: $md-screen-min) {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+                @media(max-width: $md-screen-min) {
+                    svg {
+                        width: 34.67px;
+                        height: 34.67px;
+                    }
+                }
+            }
+        }
+    }
+    
+}

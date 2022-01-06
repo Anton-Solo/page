@@ -1,0 +1,164 @@
+.lightpaper {
+    position: relative;
+    background: linear-gradient(to bottom, $service 35%, $product 25%);
+    &:after {
+        content: '';
+        position: absolute;
+        background: $lightpaper;
+        width: 100%;
+        height: 306px;
+        top: 0;
+        @media(min-width: $md-screen) {
+            right: calc((100vw - 720px)/2);
+        }
+        @media(min-width: $lg-screen) {
+            right: calc((100vw - $lg-screen-min)/2);
+        }
+        @media(min-width: $xlg-screen) {
+            right: calc((100vw - 1140px)/2);
+        }
+        @media(max-width: $md-screen-min) {
+            height: 410px;
+        }
+    }
+    .lightpaper__container {
+        position: relative;
+        padding: 71px 0 93px;
+        z-index: 2;
+        @media(max-width: 767px) {
+            padding: 195px 0 65px;
+        }
+        .lightpaper-header {
+            display: flex;
+            color: $main-color;
+            h4 {
+                font-family: 'ProximaNova-800';
+                max-width: 230px;
+                font-size: 31.997px;
+                line-height: 39px;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 23.9977px;
+                line-height: 34px;
+                margin: 0 0 0 63px;
+                padding-top: 40px;
+                max-width: 217px;
+            }
+            @media(max-width: 767px) {
+                flex-direction: column;
+                h4 {
+                    font-size: 22px;
+                    line-height: 27px;
+                    max-width: 180px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 0px;
+                    padding-top: 48px;
+                }
+            }
+        }
+        a {
+            font-family: 'ProximaNova-700';
+            position: absolute;
+            left: 90px;
+            bottom: -37px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            width: 390px;
+            height: 74px;
+            background: #FCCF18;
+            font-size: 22px;
+            line-height: 27px;
+            text-transform: uppercase;
+            color: $service;
+            z-index: 2;
+            svg {
+                opacity: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 20px;
+                transition: 0.5s;
+                path {
+                    fill: $main-color;
+                }
+            }
+            &:hover {
+                background: $service;
+                transition: 0.5s;
+                color: #FCCF18;
+                svg {
+                    opacity: 1;
+                }
+            }
+            @media(max-width: 767px) {
+                width: 280px;
+                height: 54px;
+                font-size: 16px;
+                line-height: 19px;
+                bottom: -27px;
+                left: 50%;
+                transform: translateX(-50%);
+                svg {
+                    left: 10px;
+                    width: 20px;
+                }
+            }
+        }
+        svg {
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+            z-index: 1;
+            path {
+                fill: rgba(255, 255, 255, 0.1);
+            }
+            @media(max-width: 767px) {
+                width: 196.07px;
+                height: 229px;
+                bottom: -18px;
+            }
+        }
+        .lightpaper-book {
+            position: absolute;
+            right: 0;
+            top: -25%;
+            @media(max-width: $xlg-screen-min) {
+                width: 564px;
+                right: -25px;
+            }
+            @media(max-width: 991px) {
+                overflow: hidden;
+                width: 45%;
+                right: 0;
+                top: -15%;
+            }
+            @media(max-width: 767px) {
+                width: 65%;
+                right: calc(-1*(100vw - 542px)/2);
+            }
+            @media(max-width: $sm-screen-min) {
+                width: 85%;
+                right: calc(-1*(100vw - 440px)/2);
+            }
+            @media(max-width: 459px) {
+                width: 95%;
+                right: calc(-1*(100vw - 320px)/2);
+            }
+            @media(max-width: 375px) {
+                right: calc(-1*(100vw - 376px)/ 2);
+            }
+            img {
+                width: 100%;
+                @media(max-width: 991px) {
+                    width: 464px;
+                }
+            }
+        }
+        
+    }
+}
